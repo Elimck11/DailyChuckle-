@@ -6,38 +6,42 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      jokes {
         _id
-        thoughtText
+        jokeText
+        jokeAuthor
         createdAt
       }
     }
   }
 `;
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const QUERY_JOKES = gql`
+  query getJokes {
+    jokes {
       _id
-      thoughtText
-      thoughtAuthor
+      jokeText
+      jokeAuthor
       createdAt
     }
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+export const QUERY_SINGLE_JOKE = gql`
+  query getSingleJoke($jokeId: ID!) {
+    joke(jokeId: $jokeId) {
       _id
-      thoughtText
-      thoughtAuthor
+      jokeText
+      jokeAuthor
       createdAt
       comments {
         _id
         commentText
-        commentAuthor
         createdAt
+        user {
+          _id
+          username
+        }
       }
     }
   }
@@ -49,10 +53,10 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      jokes {
         _id
-        thoughtText
-        thoughtAuthor
+        jokeText
+        jokeAuthor
         createdAt
       }
     }
