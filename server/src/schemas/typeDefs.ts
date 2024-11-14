@@ -5,6 +5,7 @@ const typeDefs = `
     email: String
     password: String
     jokes: [Joke]!
+    favorites: [Joke]
   }
 
   type Joke {
@@ -19,7 +20,7 @@ const typeDefs = `
     _id: ID
     commentText: String
     createdAt: String
-    user: User
+    commentAuthor: String
   }
 
   input JokeInput {
