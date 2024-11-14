@@ -55,4 +55,10 @@ Building **Daily Chuckle** was an invaluable learning experience in both technic
 - **Focus on Community Engagement**: By allowing users to submit, upvote, and comment on jokes, **Daily Chuckle** encourages community-driven content, making the app feel fresh and personalized.
 - **Lighthearted Mission**: Unlike typical social platforms, Daily Chuckle is purely focused on bringing laughter and positivity, making it a refreshing break from the usual internet experience.
 
+## **Future Enhancements**
+
+- **Personalized Joke Recommendations**: Using algorithms to suggest jokes based on user preferences.
+- **Badges and Achievements**: Rewarding top contributors and active participants.
+- **Advanced Search and Filter Options**: Allowing users to search for jokes by category or popularity.
+
 
