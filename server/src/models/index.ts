@@ -1,4 +1,4 @@
-import Tech from './Tech.js';
-import Matchup from './Matchup.js';
+import Thought from './Thought.js';
+import User from './User.js';
 
-export default { Tech, Matchup };
+export { Thought, User };
