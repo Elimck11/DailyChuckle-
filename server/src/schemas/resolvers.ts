@@ -1,5 +1,6 @@
-import { Comment, Joke, User } from '../models/index.js';
+import { User, Joke, Comment } from '../models/index.js';
 import { signToken, AuthenticationError } from '../utils/auth.js';
+import { GraphQLError } from 'graphql';
 
 // Define types for the arguments
 interface AddUserArgs {
@@ -7,7 +8,7 @@ interface AddUserArgs {
     username: string;
     email: string;
     password: string;
-  }
+  };
 }
 
 interface LoginUserArgs {
@@ -27,7 +28,7 @@ interface AddJokeArgs {
   input: {
     jokeText: string;
     jokeAuthor: string;
-  }
+  };
 }
 
 interface AddCommentArgs {
@@ -49,10 +50,10 @@ const resolvers = {
       return User.findOne({ username }).populate('jokes');
     },
     jokes: async () => {
-      return await Joke.find().populate('comments').sort({ createdAt: -1 });
+      return await Joke.find().sort({ createdAt: -1 });
     },
     joke: async (_parent: any, { jokeId }: JokeArgs) => {
-      return await Joke.findOne({ _id: jokeId }).populate('comments');
+      return await Joke.findOne({ _id: jokeId });
     },
     me: async (_parent: any, _args: any, context: any) => {
       if (context.user) {
@@ -61,10 +62,11 @@ const resolvers = {
       throw new AuthenticationError('Could not authenticate user.');
     },
   },
+
   Mutation: {
     addUser: async (_parent: any, { input }: AddUserArgs) => {
       const user = await User.create({ ...input });
-      const token = signToken(user);
+      const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
     
@@ -75,13 +77,13 @@ const resolvers = {
       const correctPw = await user.isCorrectPassword(password);
       if (!correctPw) throw new AuthenticationError('Could not authenticate user.');
 
-      const token = signToken(user);
+      const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
 
     addJoke: async (_parent: any, { input }: AddJokeArgs, context: any) => {
       if (context.user) {
-        const joke = await Joke.create({ ...input, jokeAuthor: context.user.username });
+        const joke = await Joke.create({ ...input });
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { jokes: joke._id } }
@@ -93,19 +95,18 @@ const resolvers = {
 
     addComment: async (_parent: any, { jokeId, commentText }: AddCommentArgs, context: any) => {
       if (context.user) {
-        const newComment = { commentText, commentAuthor: context.user.username };
         return Joke.findOneAndUpdate(
           { _id: jokeId },
           {
             $addToSet: {
-              comments: newComment,
+              comments: { commentText, commentAuthor: context.user.username },
             },
           },
           {
             new: true,
             runValidators: true,
           }
-        ).populate('comments');
+        );
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -142,7 +143,7 @@ const resolvers = {
             },
           },
           { new: true }
-        ).populate('comments');
+        );
       }
       throw new AuthenticationError('You need to be logged in!');
     },
