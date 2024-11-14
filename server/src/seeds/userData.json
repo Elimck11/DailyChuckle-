@@ -1,17 +1,28 @@
 [
     {
-        "username": "JollyGuru",
-        "email": "jolly@guru.com",
+        "username": "Elijah",
+        "email": "eli@mck.com",
         "password": "password"
     },
     {
-        "username": "SunnyScribe",
-        "email": "sunny@scribe.com",
+        "username": "Massiel",
+        "email": "mass@iel.com",
         "password": "password"
     },
     {
-        "username": "RadiantComet",
-        "email": "radiant@comet.com",
+        "username": "Stephen",
+        "email": "step@hen.com",
+        "password": "password"
+    },
+    {
+        "username": "Aidan",
+        "email": "ai@dan.com",
+        "password": "password"
+    },
+    {
+        "username": "Rorac",
+        "email": "ror@ac.com",
         "password": "password"
     }
+
 ]
