@@ -1,4 +1,4 @@
-# **Daily Chuckle**
+# **Daily Chuckle** 🎭😂
 
 ## **Project Overview**
 
@@ -15,39 +15,39 @@ We built **Daily Chuckle** to create a unique space for humor lovers to gather, 
 ## **Problem It Solves**
 
 In a fast-paced world, many people need a quick and easy way to unwind, laugh, and share positive moments. **Daily Chuckle** solves this by providing:
-- A place to discover and enjoy jokes daily.
-- A community-driven ranking for the best jokes through upvotes, helping quality humor rise to the top.
-- A platform where users can comment and connect over shared humor, creating a lighthearted social experience.
+-🎤 A place to discover and enjoy jokes daily.
+-🎉 A community-driven ranking for the best jokes through upvotes, helping quality humor rise to the top.
+-🤝 A platform where users can comment and connect over shared humor, creating a lighthearted social experience.
 
 ## **Key Features**
 
-- **Joke of the Day**: Each day, the most upvoted joke is highlighted on the homepage, making it easy for users to see the best content.
-- **User Interaction**: Users can upvote, comment on, and even favorite jokes to engage with others.
-- **Community-Driven Content**: Jokes are submitted by users, ensuring fresh and varied content that evolves with the community.
-- **Retro Comedy Club Theme**: The UI incorporates a "comedy show" theme, with a marquee design, clapping and laughter icons, and a classic theater ambiance.
+- **Joke of the Day** 🏆: Each day, the most upvoted joke is highlighted on the homepage, making it easy for users to see the best content.
+- **User Interaction** 👍💬: Users can upvote, comment on, and even favorite jokes to engage with others.
+- **Community-Driven Content** 🌐: Jokes are submitted by users, ensuring fresh and varied content that evolves with the community.
+- **Retro Comedy Club Theme** 🎬: The UI incorporates a "comedy show" theme, with a marquee design, clapping and laughter icons, and a classic theater ambiance.
 
-## **Technologies Used**
+## **Technologies Used** ⚙️
 
 - **MERN Stack (MongoDB, Express.js, React, Node.js)**: A robust technology stack chosen to provide a scalable and interactive experience.
-  - **MongoDB**: Used for storing user data, jokes, and comments, allowing for easy retrieval and management of content.
-  - **Express.js**: Handles server-side logic and API requests efficiently.
-  - **React**: Enables a responsive, single-page application with a dynamic and engaging UI.
-  - **Node.js**: Powers the backend server, providing a smooth, consistent environment.
+  - **MongoDB** 🍃: Used for storing user data, jokes, and comments, allowing for easy retrieval and management of content.
+  - **Express.js** 🚀: Handles server-side logic and API requests efficiently.
+  - **React** ⚛️: Enables a responsive, single-page application with a dynamic and engaging UI.
+  - **Node.js** 🌐: Powers the backend server, providing a smooth, consistent environment.
 
-- **GraphQL**: Chosen for its flexibility in handling complex queries, enabling efficient data fetching for jokes, user interactions, and real-time updates.
+- **GraphQL** 🔗: Chosen for its flexibility in handling complex queries, enabling efficient data fetching for jokes, user interactions, and real-time updates.
 
-- **JWT Authentication**: Ensures secure access, allowing users to create accounts, login, and interact with content while keeping their data safe.
+- **JWT Authentication** 🔒: Ensures secure access, allowing users to create accounts, login, and interact with content while keeping their data safe.
 
-- **GitHub Actions**: Automated deployment pipelines allow continuous integration and testing, ensuring a seamless user experience and smooth updates.
+- **GitHub Actions** 🛠️: Automated deployment pipelines allow continuous integration and testing, ensuring a seamless user experience and smooth updates.
 
-## **What We Learned**
+## **What We Learned** 🎓
 
 Building **Daily Chuckle** was an invaluable learning experience in both technical and design aspects. Key takeaways include:
 
 - **Handling User-Generated Content**: Managing and moderating content from users efficiently, using database structures to handle large amounts of user data smoothly.
-- **Creating a Thematic UI**: Designing an interface with a specific theme and ensuring it feels cohesive and enjoyable was both challenging and rewarding.
+- **Creating a Thematic UI** 🎨: Designing an interface with a specific theme and ensuring it feels cohesive and enjoyable was both challenging and rewarding.
 - **Building with GraphQL**: The project strengthened our understanding of GraphQL, particularly in managing queries and mutations for interactive user experiences.
-- **User Authentication**: Implementing JWT-based authentication to protect user accounts and enhance security.
+- **User Authentication** 🔑: Implementing JWT-based authentication to protect user accounts and enhance security.
 
 ## **What Makes Daily Chuckle Stand Out**
 
@@ -57,8 +57,18 @@ Building **Daily Chuckle** was an invaluable learning experience in both technic
 
 ## **Future Enhancements**
 
-- **Personalized Joke Recommendations**: Using algorithms to suggest jokes based on user preferences.
-- **Badges and Achievements**: Rewarding top contributors and active participants.
-- **Advanced Search and Filter Options**: Allowing users to search for jokes by category or popularity.
+- **Personalized Joke Recommendations** 🎯: Using algorithms to suggest jokes based on user preferences.
+- **Badges and Achievements** 🏆🎖️: Rewarding top contributors and active participants.
+- **Advanced Search and Filter Options** 🔍🎭: Allowing users to search for jokes by category or popularity.
+
+## **Contributors**
+
+- Aidan Choi <a href="https://github.com/achoi2k20" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
+- Elijah Mcknight <a href="https://github.com/Elimck11" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
+- Massiel Esscalante <a href="https://github.com/MassiEscalante" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
+- Rorac Johnson <a href="https://github.com/RoracJ/RoracJ" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
+- Stephen Lee <a href="https://github.com/leestephen0320" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
+
+
 
 
