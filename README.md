@@ -4,6 +4,10 @@
 
 **Daily Chuckle** is an engaging, interactive web application designed to bring laughter to users daily.This app allows users to share, upvote, and comment on their favorite jokes, with the added fun of a "Joke of the Day" feature. The entire app has a "comedy show" theme, featuring retro marquee aesthetics that mimic the feel of a classic theater, bringing a light-hearted experience to users looking for a quick laugh.
 
+## **Deployed Link**
+
+- [Daily Chuckle Live App](#) <!-- Deployed link will go here -->
+
 ## **Motivation**
 
 In today’s world, with its many challenges, finding moments to laugh and relax is more important than ever. The motivation behind **Daily Chuckle** was to create a platform that fosters positivity, community, and a sense of joy. By making a user-focused application that encourages people to share and enjoy humor, we hope to bring lighthearted fun to anyone who visits. 
@@ -60,6 +64,13 @@ Building **Daily Chuckle** was an invaluable learning experience in both technic
 - **Personalized Joke Recommendations** 🎯: Using algorithms to suggest jokes based on user preferences.
 - **Badges and Achievements** 🏆🎖️: Rewarding top contributors and active participants.
 - **Advanced Search and Filter Options** 🔍🎭: Allowing users to search for jokes by category or popularity.
+
+
+## **Screenshots**
+
+| ![screenshot](#) | ![screenshot](#) | ![screenshot](#) |
+
+<!-- Replace '#' with the actual paths or URLs for the screenshots -->
 
 ## **Contributors**
 
