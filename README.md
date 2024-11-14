@@ -74,11 +74,12 @@ Building **Daily Chuckle** was an invaluable learning experience in both technic
 
 ## **Contributors**
 
-- Aidan Choi <a href="https://github.com/achoi2k20" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
-- Elijah Mcknight <a href="https://github.com/Elimck11" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
-- Massiel Esscalante <a href="https://github.com/MassiEscalante" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
-- Rorac Johnson <a href="https://github.com/RoracJ/RoracJ" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
-- Stephen Lee <a href="https://github.com/leestephen0320" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub Icon"/></a>
+- Aidan Choi <a href="https://github.com/achoi2k20" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png" alt="GitHub Icon"/></a>
+- Elijah Mcknight <a href="https://github.com/Elimck11" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png" alt="GitHub Icon"/></a>
+- Massiel Esscalante <a href="https://github.com/MassiEscalante" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png" alt="GitHub Icon"/></a>
+- Rorac Johnson <a href="https://github.com/RoracJ/RoracJ" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png" alt="GitHub Icon"/></a>
+- Stephen Lee <a href="https://github.com/leestephen0320" title="Visit GitHub Profile"><img src="https://img.icons8.com/material-outlined/24/FFFFFF/github.png" alt="GitHub Icon"/></a>
+
 
 
 
