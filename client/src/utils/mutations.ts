@@ -13,23 +13,23 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_USER = gql`
-  mutation Mutation($input: UserInput!) {
-  addUser(input: $input) {
-    user {
-      username
-      _id
+  mutation addUser($input: UserInput!) {
+    addUser(input: $input) {
+      user {
+        _id
+        username
+      }
+      token
     }
-    token
   }
-}
 `;
 
-export const ADD_THOUGHT = gql`
-  mutation AddThought($input: ThoughtInput!) {
-    addThought(input: $input) {
+export const ADD_JOKE = gql`
+  mutation addJoke($input: JokeInput!) {
+    addJoke(input: $input) {
       _id
-      thoughtText
-      thoughtAuthor
+      jokeText
+      jokeAuthor
       createdAt
       comments {
         _id
@@ -40,16 +40,20 @@ export const ADD_THOUGHT = gql`
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+  mutation addComment($jokeId: ID!, $commentText: String!) {
+    addComment(jokeId: $jokeId, commentText: $commentText) {
       _id
-      thoughtText
-      thoughtAuthor
+      jokeText
+      jokeAuthor
       createdAt
       comments {
         _id
         commentText
         createdAt
+        user {
+          _id
+          username
+        }
       }
     }
   }
