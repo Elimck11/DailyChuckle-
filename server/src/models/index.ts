@@ -1,4 +1,5 @@
-import Thought from './Thought.js';
+import Comment from './Comment.js';
+import Joke from './Joke.js';
 import User from './User.js';
 
-export { Thought, User };
+export { Comment, Joke, User };
