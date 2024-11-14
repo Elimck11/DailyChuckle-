@@ -1,8 +1,8 @@
 {
-  "name": "tech-matchup-app",
+  "name": "main",
   "version": "1.0.0",
   "description": "",
-  "main": "server/dist/server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
     "start:dev": "concurrently \"cd server && npm run watch\" \"wait-on tcp:3001 && cd client && npm run dev\"",
@@ -15,12 +15,11 @@
     "build": "concurrently \"cd server && npm run build\" \"cd client && npm run build\"",
     "render-build": "npm install && npm run build"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "concurrently": "^8.2.2"
-  },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "wait-on": "^7.2.0"
   }
 }
