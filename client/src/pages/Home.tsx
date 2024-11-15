@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import Header from '../components/Header';
 import JokeBox from '../components/JokeBox';
 import SignInForm from '../components/SignInForm';
 import Logo from '../components/Logo';
@@ -17,8 +16,7 @@ const Home = () => {
     <div className="App">
       <BackgroundOverlay />
 
-      <Header />
-
+      <div className="background"></div>
       <main className="content-container">
         <Logo logoClicked={logoClicked} onLogoClick={handleLogoClick} />
         
