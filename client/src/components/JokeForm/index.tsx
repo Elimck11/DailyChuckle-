@@ -1,24 +1,22 @@
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
-import { ADD_JOKE } from '../../utils/mutations';  // Update to the correct mutation for Jokes
-import { QUERY_JOKES, QUERY_ME } from '../../utils/queries';  // Update to the correct query for Jokes
+import { ADD_JOKE } from '../../utils/mutations'; // Updated mutation name
+import { QUERY_JOKES, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
 const JokeForm = () => {
   const [jokeText, setJokeText] = useState('');
-
   const [characterCount, setCharacterCount] = useState(0);
 
   const [addJoke, { error }] = useMutation(ADD_JOKE, {
     refetchQueries: [
       QUERY_JOKES,
-      'getJokes',  // Update the query name accordingly
+      'getJokes', // Refactored query name
       QUERY_ME,
-      'me',
-    ],
+      'me'
+    ]
   });
 
   const handleFormSubmit = async (event: FormEvent) => {
@@ -41,7 +39,7 @@ const JokeForm = () => {
   const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = event.target;
 
-    if (name === 'jokeText' && value.length <= 280) {  // Update to jokeText
+    if (name === 'jokeText' && value.length <= 280) {
       setJokeText(value);
       setCharacterCount(value.length);
     }
@@ -49,7 +47,7 @@ const JokeForm = () => {
 
   return (
     <div>
-      <h3>What's your joke?</h3>
+      <h3>What's your best joke?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -66,9 +64,9 @@ const JokeForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="jokeText"  // Update to jokeText
+                name="jokeText"
                 placeholder="Here's a new joke..."
-                value={jokeText}  // Update to jokeText
+                value={jokeText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
