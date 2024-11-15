@@ -2,38 +2,37 @@ import { useState, type FormEvent, type ChangeEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import { ADD_JOKE } from '../../utils/mutations';  // Update to the correct mutation for Jokes
+import { QUERY_JOKES, QUERY_ME } from '../../utils/queries';  // Update to the correct query for Jokes
 
 import Auth from '../../utils/auth';
 
-const ThoughtForm = () => {
-  const [thoughtText, setThoughtText] = useState('');
+const JokeForm = () => {
+  const [jokeText, setJokeText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addThought, { error }] = useMutation
-  (ADD_THOUGHT, {
+  const [addJoke, { error }] = useMutation(ADD_JOKE, {
     refetchQueries: [
-      QUERY_THOUGHTS,
-      'getThoughts',
+      QUERY_JOKES,
+      'getJokes',  // Update the query name accordingly
       QUERY_ME,
-      'me'
-    ]
+      'me',
+    ],
   });
 
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
     try {
-      await addThought({
-        variables: { input:{
-          thoughtText,
-          thoughtAuthor: Auth.getProfile().data.username,
+      await addJoke({
+        variables: { input: {
+          jokeText,
+          jokeAuthor: Auth.getProfile().data.username,
         }},
       });
 
-      setThoughtText('');
+      setJokeText('');
     } catch (err) {
       console.error(err);
     }
@@ -42,15 +41,15 @@ const ThoughtForm = () => {
   const handleChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = event.target;
 
-    if (name === 'thoughtText' && value.length <= 280) {
-      setThoughtText(value);
+    if (name === 'jokeText' && value.length <= 280) {  // Update to jokeText
+      setJokeText(value);
       setCharacterCount(value.length);
     }
   };
 
   return (
     <div>
-      <h3>What's on your techy mind?</h3>
+      <h3>What's your joke?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -67,9 +66,9 @@ const ThoughtForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="thoughtText"
-                placeholder="Here's a new thought..."
-                value={thoughtText}
+                name="jokeText"  // Update to jokeText
+                placeholder="Here's a new joke..."
+                value={jokeText}  // Update to jokeText
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -78,7 +77,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+                Add Joke
               </button>
             </div>
             {error && (
@@ -90,7 +89,7 @@ const ThoughtForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
+          You need to be logged in to share your jokes. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
@@ -98,4 +97,4 @@ const ThoughtForm = () => {
   );
 };
 
-export default ThoughtForm;
+export default JokeForm;
