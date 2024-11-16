@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Daily Chuckle Jokes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Root element for React -->
+  <div id="root"></div>
+
+  <!-- React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel for JSX support -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- React code directly within the HTML file -->
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [logoClicked, setLogoClicked] = useState(false);
+
+      const handleLogoClick = () => {
+        setLogoClicked(!logoClicked);
+      };
+
+      // List of jokes (example, you can replace/add more jokes)
+      const jokes = [
+        "Why did the chicken cross the road? To get to the other side!",
+        "What do you call fake spaghetti? An impasta!",
+        "How does a penguin build its house? Igloos it together!",
+        "Why don’t skeletons fight each other? They don’t have the guts!",
+        "What do you call cheese that isn’t yours? Nacho cheese!",
+        "Why couldn’t the bicycle stand up by itself? It was two-tired!",
+        // Repeat jokes to reach 36 or use different ones
+      ];
+
+      return (
+        <div className="App">
+          {/* Background overlay */}
+          <div className="background"></div>
+          
+          {/* Header */}
+          <header className="main-header">
+            <nav>
+              <a href="#home">Home</a>
+              <a href="#post">Post</a>
+              <a href="#profile">Profile</a>
+            </nav>
+          </header>
+
+          {/* Logo and Jokes Container */}
+          <main className="content-container">
+            <h1 
+              className={`logo-text ${logoClicked ? 'logo-clicked' : ''}`} 
+              onClick={handleLogoClick}
+            >
+              DAILY CHUCKLE
+            </h1>
+            
+            {/* Jokes Grid */}
+            <div className="jokes-container">
+              {Array.from({ length: 36 }).map((_, i) => (
+                <div key={i} className="joke-box">
+                  {jokes[i % jokes.length]}
+                </div>
+              ))}
+            </div>
+          </main>
+        </div>
+      );
+    }
+
+    // Render the App component into the root div
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+
+</body>
+</html>
