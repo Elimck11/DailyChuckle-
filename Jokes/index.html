@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Daily Chuckle Sign-In</title>
+  <title>Daily Chuckle Jokes</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -30,9 +30,16 @@
         setLogoClicked(!logoClicked);
       };
 
-      const handleButtonClick = () => {
-        alert("Sign-in button clicked!");
-      };
+      // List of jokes (example, you can replace/add more jokes)
+      const jokes = [
+        "Why did the chicken cross the road? To get to the other side!",
+        "What do you call fake spaghetti? An impasta!",
+        "How does a penguin build its house? Igloos it together!",
+        "Why don’t skeletons fight each other? They don’t have the guts!",
+        "What do you call cheese that isn’t yours? Nacho cheese!",
+        "Why couldn’t the bicycle stand up by itself? It was two-tired!",
+        // Repeat jokes to reach 36 or use different ones
+      ];
 
       return (
         <div className="App">
@@ -50,7 +57,7 @@
             </nav>
           </header>
 
-          {/* Logo and Boxes Container */}
+          {/* Logo and Jokes Container */}
           <main className="content-container">
             <h1 
               className={`logo-text ${logoClicked ? 'logo-clicked' : ''}`} 
@@ -59,22 +66,13 @@
               DAILY CHUCKLE
             </h1>
             
-            <div className="boxes-container">
-              {/* Sign-In Box */}
-              <section className="sign-in-box">
-                <h2>Sign In</h2>
-                <form onSubmit={(e) => { e.preventDefault(); handleButtonClick(); }}>
-                  <input type="text" placeholder="Username" required />
-                  <input type="password" placeholder="Password" required />
-                  <button type="submit">Enter</button>
-                </form>
-              </section>
-
-              {/* Joke of the Day Box */}
-              <section className="joke-box">
-                <h2>Joke of the Day</h2>
-                <p className="joke-content">Why did the scarecrow win an award? Because he was outstanding in his field!</p>
-              </section>
+            {/* Jokes Grid */}
+            <div className="jokes-container">
+              {Array.from({ length: 36 }).map((_, i) => (
+                <div key={i} className="joke-box">
+                  {jokes[i % jokes.length]}
+                </div>
+              ))}
             </div>
           </main>
         </div>
