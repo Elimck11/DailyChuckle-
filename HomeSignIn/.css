@@ -104,14 +104,14 @@ html, body, #root {
 
 /* Rainbow color animation */
 @keyframes rainbow {
-  0% { color: #ff0000; }
-  14% { color: #ff7f00; }
-  28% { color: #ffff00; }
-  42% { color: #00ff00; }
+  0% { color: #110295; }
+  14% { color: #2a0ea6; }
+  28% { color: #4437d7; }
+  42% { color: #5869e7; }
   57% { color: #0000ff; }
-  71% { color: #4b0082; }
-  85% { color: #8b00ff; }
-  100% { color: #ff0000; }
+  71% { color: #24077b; }
+  85% { color: #350b92; }
+  100% { color: #370453; }
 }
 
 /* Toggle color on logo click */
