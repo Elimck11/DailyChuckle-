@@ -28,7 +28,7 @@ const SignInForm = () => {
 
       // On success, store the JWT token and redirect the user
       Auth.login(data.login.token);  // This stores the token and redirects
-      navigate('/');  // Optionally redirect to homepage after login
+      navigate('/jokes');  // Redirect to the /jokes page after successful login
 
     } catch (e) {
       console.error('Error logging in:', e);
@@ -48,7 +48,7 @@ const SignInForm = () => {
           className="form-input"
           placeholder="Your username"
           name="username"
-          type="username"
+          type="text"
           value={formState.username}
           onChange={handleChange}
           required
@@ -79,7 +79,7 @@ const SignInForm = () => {
 
       {data && (
         <p>
-          Success! You are now logged in and can <a href="/">go back to the homepage</a>.
+          Success! You are now logged in and can <a href="/jokes">go to your jokes</a>.
         </p>
       )}
     </section>

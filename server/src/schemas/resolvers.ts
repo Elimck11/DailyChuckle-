@@ -12,7 +12,7 @@ interface AddUserArgs {
 }
 
 interface LoginUserArgs {
-  email: string;
+  username: string;
   password: string;
 }
 
@@ -85,8 +85,8 @@ const resolvers = {
       return { token, user };
     },
     
-    login: async (_parent: any, { email, password }: LoginUserArgs) => {
-      const user = await User.findOne({ email });
+    login: async (_parent: any, { username, password }: LoginUserArgs) => {
+      const user = await User.findOne({ username });
       if (!user) throw new AuthenticationError('Could not authenticate user.');
       
       const correctPw = await user.isCorrectPassword(password);
