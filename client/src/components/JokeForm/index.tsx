@@ -23,17 +23,24 @@ const JokeForm = () => {
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
+    const userId = Auth.getProfile()?.data.id; // Get the userId from the logged-in user's profile
+    
+    if (!userId) {
+      console.error("User is not logged in or userId is unavailable.");
+      return;  // Prevent submitting if userId is unavailable
+    }
+
     try {
       await addJoke({
         variables: { 
           input: {
             jokeText,
-            jokeAuthor: Auth.getProfile().data.username,
+            jokeAuthor: userId,  // Use userId instead of username
           }
         },
       });
 
-      setJokeText('');
+      setJokeText('');  // Reset joke text after submission
     } catch (err) {
       console.error(err);
     }

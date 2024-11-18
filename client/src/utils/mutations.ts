@@ -42,7 +42,10 @@ export const ADD_JOKE = gql`
     addJoke(input: $input) {
       _id
       jokeText
-      jokeAuthor
+      jokeAuthor {
+        _id
+        username
+      }
       createdAt
       comments {
         _id
@@ -51,6 +54,7 @@ export const ADD_JOKE = gql`
     }
   }
 `;
+
 
 export const ADD_COMMENT = gql`
   mutation addComment($jokeId: ID!, $commentText: String!) {

@@ -3,7 +3,7 @@ import { Schema, model, Document } from 'mongoose';
 // Define an interface for the Joke document
 interface IJoke extends Document {
   jokeText: string;
-  author: Schema.Types.ObjectId;
+  jokeAuthor: Schema.Types.ObjectId;
   timestamp: Date;
   upvotes: number;
 }
@@ -16,7 +16,7 @@ const jokeSchema = new Schema<IJoke>(
       required: true,
       trim: true,
     },
-    author: {
+    jokeAuthor: {
       type: Schema.Types.ObjectId,
       ref: 'User',
       required: true,
