@@ -24,6 +24,19 @@ export const ADD_USER = gql`
   }
 `;
 
+export const CREATE_USER = gql`
+  mutation createUser($username: String!, $email: String!, $password: String!) {
+    registerUser(username: $username, email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
 export const ADD_JOKE = gql`
   mutation addJoke($input: JokeInput!) {
     addJoke(input: $input) {

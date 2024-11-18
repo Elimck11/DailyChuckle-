@@ -69,6 +69,21 @@ const resolvers = {
       const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
+
+    registerUser: async (_: any, { username, email, password }: { username: string; email: string; password: string }) => {
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
+        throw new Error("User already exists with this email");
+      }
+  
+      // Create user (password is hashed by pre-save hook)
+      const user = await User.create({ username, email, password });
+  
+      // Generate JWT token using signToken with userId
+      const token = signToken(user.username, user.email, user._id); // Use user._id.toString()
+  
+      return { token, user };
+    },
     
     login: async (_parent: any, { email, password }: LoginUserArgs) => {
       const user = await User.findOne({ email });
