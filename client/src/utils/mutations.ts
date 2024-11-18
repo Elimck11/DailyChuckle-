@@ -42,10 +42,6 @@ export const ADD_JOKE = gql`
     addJoke(input: $input) {
       _id
       jokeText
-      jokeAuthor {
-        _id
-        username
-      }
       createdAt
       comments {
         _id

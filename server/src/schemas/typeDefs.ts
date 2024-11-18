@@ -13,7 +13,7 @@ const typeDefs = `
     jokeText: String
     jokeAuthor: String
     createdAt: String
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Comment {

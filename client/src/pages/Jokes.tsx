@@ -10,7 +10,7 @@ import { QUERY_JOKES } from '../utils/queries';
 const App: React.FC = () => {
   const [logoClicked, setLogoClicked] = useState(false);
   const { loading, data } = useQuery(QUERY_JOKES);
-  const jokes = data?.users || [];
+  const jokes = data?.jokes || [];
 
   const handleLogoClick = () => {
     setLogoClicked(!logoClicked);
