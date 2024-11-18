@@ -49,6 +49,7 @@ const typeDefs = `
 
   type Mutation {
     addUser(input: UserInput!): Auth
+    registerUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addJoke(input: JokeInput!): Joke
     addComment(jokeId: ID!, commentText: String!): Joke
