@@ -4,26 +4,27 @@ import { useQuery } from '@apollo/client';
 import CommentList from '../components/CommentList/index.tsx';
 import CommentForm from '../components/CommentForm/index.tsx';
 
-import { QUERY_SINGLE_THOUGHT } from '../utils/queries.ts';
+import { QUERY_SINGLE_JOKE } from '../utils/queries.ts';
 
-const SingleThought = () => {
-  const { thoughtId } = useParams();
+const SingleJoke = () => {
+  const { jokeId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
-    variables: { thoughtId: thoughtId },
+  const { loading, data } = useQuery(QUERY_SINGLE_JOKE, {
+    variables: { jokeId: jokeId },
   });
 
-  const thought = data?.thought || {};
+  const joke = data?.joke || {};
 
   if (loading) {
     return <div>Loading...</div>;
   }
+
   return (
     <div className="my-3">
       <h3 className="card-header bg-dark text-light p-2 m-0">
-        {thought.thoughtAuthor} <br />
+        {joke.jokeAuthor} <br />
         <span style={{ fontSize: '1rem' }}>
-          had this thought on {new Date(Number(thought.createdAt)).toLocaleString()}
+          shared this joke on {new Date(Number(joke.createdAt)).toLocaleString()}
         </span>
       </h3>
       <div className="bg-light py-4">
@@ -36,18 +37,18 @@ const SingleThought = () => {
             lineHeight: '1.5',
           }}
         >
-          {thought.thoughtText}
+          {joke.jokeText}
         </blockquote>
       </div>
 
       <div className="my-5">
-        <CommentList comments={thought.comments} />
+        <CommentList comments={joke.comments} />
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-        <CommentForm thoughtId={thought._id} />
+        <CommentForm jokeId={joke._id} />
       </div>
     </div>
   );
 };
 
-export default SingleThought;
+export default SingleJoke;
