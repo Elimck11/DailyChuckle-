@@ -5,7 +5,7 @@ const cleanDB = async (): Promise<void> => {
   try {
     // Delete documents from THought collection
     await Joke.deleteMany({});
-    console.log('Thought collection cleaned.');
+    console.log('Joke collection cleaned.');
 
     // Delete documents from User collection
     await User.deleteMany({});
