@@ -1,0 +1,130 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #00274d; /* Dark navy */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Align logo and links */
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-header nav {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  gap: 20px; /* Add spacing between links */
+}
+
+.main-header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.main-header nav a:hover {
+  background-color: #0056b3; /* Add hover effect */
+  border-radius: 4px;
+}
+
+/* Logo Container */
+.logo-container {
+  text-align: right; /* Keep the logo on the left */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo-subtext {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Centered Box Styles */
+.centered-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.centered-box h2 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.centered-box p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+.centered-box p a {
+  color: #004085;
+  text-decoration: underline;
+}
+
+.centered-box p a:hover {
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header nav {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px;
+  }
+
+  .main-header nav a {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .logo-container {
+    font-size: 1.8rem;
+  }
+
+  .centered-box {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header nav {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: flex-end; /* Align links to the right */
+    gap: 5px;
+  }
+
+  .main-header nav a {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+
+  .logo-container {
+    font-size: 1.5rem;
+  }
+}
