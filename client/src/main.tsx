@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
+import Jokes from './pages/Jokes.js'
 import ErrorPage from './pages/Error';
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />
       }, 
+      {
+        path: '/jokes',
+        element: <Jokes />
+      }
       // {
       //   path: '/login',
       //   element: <Login />
