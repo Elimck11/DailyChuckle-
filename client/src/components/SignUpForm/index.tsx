@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../../utils/mutations'; // Import the GraphQL mutation for user creation
+import { CREATE_USER } from '../../utils/mutations'; // Import the GraphQL mutation for user creation
 import Auth from '../../utils/auth'; // Import your AuthService
 import type { UserRegister } from '../../interfaces/UserRegister';
 
@@ -13,7 +13,7 @@ const SignUpForm = () => {
   });
 
   const [showAlert, setShowAlert] = useState(false);
-  const [createUserMutation] = useMutation(ADD_USER);
+  const [createUserMutation] = useMutation(CREATE_USER);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
