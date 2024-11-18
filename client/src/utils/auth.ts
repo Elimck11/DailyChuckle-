@@ -5,7 +5,7 @@ interface ExtendedJwt extends JwtPayload {
   data:{
     username:string,
     email:string,
-    id:string
+    _id:string
   }
 };
 
@@ -49,7 +49,7 @@ class AuthService {
   // This method logs in the user by storing the token in localStorage and redirecting to the home page.
   login(idToken: string) {
     localStorage.setItem('id_token', idToken);
-    window.location.assign('/');
+    window.location.assign('/jokes');
   }
 
   // This method logs out the user by removing the token from localStorage and redirecting to the home page.

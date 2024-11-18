@@ -28,7 +28,6 @@ const SignInForm = () => {
 
       // On success, store the JWT token and redirect the user
       Auth.login(data.login.token);  // This stores the token and redirects
-      navigate('/jokes');  // Redirect to the /jokes page after successful login
 
     } catch (e) {
       console.error('Error logging in:', e);

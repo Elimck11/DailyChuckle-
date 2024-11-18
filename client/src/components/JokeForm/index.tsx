@@ -23,7 +23,7 @@ const JokeForm = () => {
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
 
-    const userId = Auth.getProfile()?.data.id; // Get the userId from the logged-in user's profile
+    const userId = Auth.getProfile()?.data._id; // Get the userId from the logged-in user's profile
     
     if (!userId) {
       console.error("User is not logged in or userId is unavailable.");
