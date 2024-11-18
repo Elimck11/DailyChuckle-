@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 
 import { ADD_COMMENT } from '../../utils/mutations';
 
-const CommentForm = ({ thoughtId }: any) => {
+const CommentForm = ({ jokeId }: any) => {
   const [commentText, setCommentText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -15,7 +15,7 @@ const CommentForm = ({ thoughtId }: any) => {
     try {
       await addComment({
         variables: { 
-          thoughtId, commentText 
+          jokeId, commentText 
         }
       });
 
@@ -36,7 +36,7 @@ const CommentForm = ({ thoughtId }: any) => {
 
   return (
     <div>
-      <h4>What are your thoughts on this thought?</h4>
+      <h4>What are your thoughts on this joke?</h4>
       <p
         className={`m-0 ${
           characterCount === 280 || error ? 'text-danger' : ''
@@ -52,7 +52,7 @@ const CommentForm = ({ thoughtId }: any) => {
         <div className="col-12 col-lg-9">
           <textarea
             name="commentText"
-            placeholder="Add your comment..."
+            placeholder="Add your comment about this joke..."
             value={commentText}
             className="form-input w-100"
             style={{ lineHeight: '1.5' }}
