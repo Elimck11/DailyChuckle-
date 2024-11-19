@@ -6,7 +6,7 @@
 
 ## **Deployed Link**
 
-- [Daily Chuckle Live App](#) <!-- Deployed link will go here -->
+- [Daily Chuckle Live App](https://dailychuckle.onrender.com ) <!-- Deployed link will go here -->
 
 ## **Motivation**
 
@@ -68,7 +68,7 @@ Building **Daily Chuckle** was an invaluable learning experience in both technic
 
 ## **Screenshots**
 
-| ![screenshot](#) | ![screenshot](#) | ![screenshot](#) |
+| ![Sign In Page](client/src/assets/signin.png) | ![Jokes Page](client/src/assets/jokes.png) 
 
 <!-- Replace '#' with the actual paths or URLs for the screenshots -->
 
