@@ -100,25 +100,43 @@ const resolvers = {
       if (context.user) {
         const { jokeText } = input;
     
+        // Find the user in the database
         const user = await User.findById(context.user._id);
         if (!user) {
           throw new AuthenticationError('User not found.');
         }
     
-        const joke = await Joke.create({
-          jokeText,
-          jokeAuthor: user.username, // Save username instead of userId
-        });
+        try {
+          // Create a new joke
+          const joke = await Joke.create({
+            jokeText,
+            jokeAuthor: user.username, // Store the username, not the userId
+          });
     
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { jokes: joke._id } }
-        );
+          // Ensure joke creation was successful
+          if (!joke) {
+            throw new Error('Failed to create joke');
+          }
     
-        return joke;
+          // Log for debugging (remove or replace with a logger for production)
+          console.log(`Joke by ${joke.jokeAuthor} created: ${joke.jokeText}`);
+    
+          // Update the user's jokes array
+          await User.findOneAndUpdate(
+            { _id: context.user._id },
+            { $addToSet: { jokes: joke._id } }  // Add the joke's _id to the user's jokes array
+          );
+    
+          return joke;
+        } catch (error) {
+          // Handle any errors during joke creation or user update
+          throw new Error('Error while creating joke or updating user: ' + error);
+        }
       }
+    
       throw new AuthenticationError('You need to be logged in!');
     },
+    
     
 
     addComment: async (_parent: any, { jokeId, commentText }: AddCommentArgs, context: any) => {

@@ -4,14 +4,25 @@ import cleanDB from './cleanDB.js';
 
 import userData from './userData.json' assert { type: 'json' };
 import jokeData from './jokeData.json' assert { type: 'json' };
+import bcrypt from 'bcrypt';
+
+const saltRounds = 10;
 
 const seedDatabase = async (): Promise<void> => {
   try {
     await db();
     await cleanDB();
 
-    // Insert users into the database
-    const users = await User.insertMany(userData);
+    // Hash the passwords in userData before inserting them
+    const hashedUsers = await Promise.all(
+      userData.map(async (user) => {
+        const hashedPassword = await bcrypt.hash(user.password, saltRounds);
+        return { ...user, password: hashedPassword };
+      })
+    );
+
+    // Insert the users with hashed passwords
+    const users = await User.insertMany(hashedUsers);
 
     // Map jokeData to replace jokeAuthor with the corresponding user ID
     const jokesWithAuthorIds = jokeData.map((joke) => {

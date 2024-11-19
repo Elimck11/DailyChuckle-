@@ -7,6 +7,7 @@ interface IUser extends Document {
   email: string;
   password: string;
   favorite: Schema.Types.ObjectId[];
+  jokes: Schema.Types.ObjectId[];  // Add jokes field to store references to Joke objects
   isCorrectPassword(password: string): Promise<boolean>;
 }
 
@@ -34,6 +35,12 @@ const userSchema = new Schema<IUser>(
       {
         type: Schema.Types.ObjectId,
         ref: 'Joke',
+      },
+    ],
+    jokes: [  // Add this to store references to jokes created by the user
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Joke',  // Reference to the Joke model
       },
     ],
   },
