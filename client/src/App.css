@@ -494,7 +494,7 @@ label form [type='radio'] {
   margin-bottom: 0.5rem; /* Keeps space between the heading and the content */
   transition: transform 0.3s ease;
 }
-
+ 
 .joke-box h2:hover {
   animation: wiggle 0.6s ease-in-out; /* Apply wiggle animation on hover */
 }
