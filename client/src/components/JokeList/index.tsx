@@ -33,12 +33,12 @@ const JokeList: React.FC<JokeListProps> = ({ jokes, title }) => {
               <p>{joke.jokeText}</p>
             </div>
             {/* Create a link to this joke's page to view its comments */}
-            <Link
+            {/* <Link
               className="btn btn-primary btn-block btn-squared"
               to={`/jokes/${joke._id}`}
             >
               Join the discussion on this joke.
-            </Link>
+            </Link> */}
           </div>
         ))}
     </div>
