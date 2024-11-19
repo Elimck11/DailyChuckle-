@@ -28,6 +28,23 @@ const Home = () => {
 
         <div className="boxes-container">
           {/* Tab Navigation */}
+          {/* <div className="tab-switch">
+            <button
+              className={`tab ${activeTab === 'signIn' ? 'active' : ''}`}
+              onClick={() => handleTabSwitch('signIn')}
+            >
+              Sign In
+            </button>
+            <button
+              className={`tab ${activeTab === 'signUp' ? 'active' : ''}`}
+              onClick={() => handleTabSwitch('signUp')}
+            >
+              Sign Up
+            </button>
+          </div> */}
+
+          {/* Tab Content */}
+          <div className="form-container">
           <div className="tab-switch">
             <button
               className={`tab ${activeTab === 'signIn' ? 'active' : ''}`}
@@ -42,9 +59,6 @@ const Home = () => {
               Sign Up
             </button>
           </div>
-
-          {/* Tab Content */}
-          <div className="form-container">
             {activeTab === 'signIn' && <SignInForm />}
             {activeTab === 'signUp' && <SignUpForm />}
           </div>

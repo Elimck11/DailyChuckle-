@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 interface Joke {
   _id: string;
   jokeAuthor: string;
