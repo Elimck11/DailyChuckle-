@@ -2,8 +2,8 @@ import db from '../config/connection.js';
 import { Joke, User } from '../models/index.js';
 import cleanDB from './cleanDB.js';
 
-import userData from './userData.json' assert { type: 'json' };
-import jokeData from './jokeData.json' assert { type: 'json' };
+import userData from './userData.json' with { type: 'json' };
+import jokeData from './jokeData.json' with { type: 'json' };
 import bcrypt from 'bcrypt';
 
 const saltRounds = 10;
