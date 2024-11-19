@@ -6,5 +6,6 @@ export interface Joke {
     jokeAuthor: string;
     createdAt: string;
     comments: Comment[]; // A list of comments associated with the joke
+    upvotes: number;
 }
   

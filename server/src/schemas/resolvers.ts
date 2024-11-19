@@ -1,6 +1,6 @@
-import { User, Joke, Comment } from '../models/index.js';
+import { User, Joke } from '../models/index.js';
 import { signToken, AuthenticationError } from '../utils/auth.js';
-import { GraphQLError } from 'graphql';
+// import { GraphQLError } from 'graphql';
 
 // Define types for the arguments
 interface AddUserArgs {

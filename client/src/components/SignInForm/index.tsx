@@ -1,13 +1,11 @@
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';  // Ensure this import path is correct
-import { useNavigate } from 'react-router-dom';
 import Auth from '../../utils/auth';  // Import your AuthService
 
 const SignInForm = () => {
   const [formState, setFormState] = useState({ username: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
-  const navigate = useNavigate();
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
