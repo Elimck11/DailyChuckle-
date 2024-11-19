@@ -23,6 +23,55 @@
         "username": "Rorac",
         "email": "ror@ac.com",
         "password": "password"
+    },
+    {
+        "username": "Brian_Kernighan",
+        "email": "brian@kernighan.com",
+        "password": "password"
+    },
+    {
+        "username": "Max_The_Kat",
+        "email": "max@thekat.com",
+        "password": "password"
+    },
+    {
+        "username": "ComeDYCommander",
+        "email": "comedy@commander.com",
+        "password": "password"
+    },
+    {
+        "username": "Kent_Beck",
+        "email": "kent@beck.com",
+        "password": "password"
+    },
+    {
+        "username": "MonkeyDLuffy",
+        "email": "luffy@pirate.com",
+        "password": "password"
+    },
+    {
+        "username": "Karen_Kay",
+        "email": "karen@kay.com",
+        "password": "password"
+    },
+    {
+        "username": "Tysonthebodybuilder",
+        "email": "tyson@bodybuilder.com",
+        "password": "password"
+    },
+    {
+        "username": "David_Thomas",
+        "email": "david@thomas.com",
+        "password": "password"
+    },
+    {
+        "username": "Robbiethe1",
+        "email": "robbie@the1.com",
+        "password": "password"
+    },
+    {
+        "username": "ImREALLYreallyfunny",
+        "email": "really@funny.com",
+        "password": "password"
     }
-
 ]

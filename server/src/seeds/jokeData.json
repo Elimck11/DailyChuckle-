@@ -1,42 +1,52 @@
 [
   {
     "jokeText": "Why was the math book sad? Because it had too many problems",
-    "jokeAuthor": "Brian_Kernighan"
+    "jokeAuthor": "Elijah",
+    "upvotes": 5
   },
   {
     "jokeText": "What do you call cheese that isn't yours? Nacho Cheese!",
-    "jokeAuthor": "Max The Kat"
+    "jokeAuthor": "Massiel",
+    "upvotes": 3
   },
   {
-    "jokeText": "Why couldnt the bicycle stand up by itself? it was two-tired!",
-    "jokeAuthor": "ComeDYCommander"
+    "jokeText": "Why couldn't the bicycle stand up by itself? It was two-tired!",
+    "jokeAuthor": "Stephen",
+    "upvotes": 7
   },
   {
-    "jokeText": "Why did the tomato turn red? because it saw the salad dressing!",
-    "jokeAuthor": "Kent Beck"
+    "jokeText": "Why did the tomato turn red? Because it saw the salad dressing!",
+    "jokeAuthor": "Aidan",
+    "upvotes": 4
   },
   {
-    "jokeText": "I wanted another piece of pizza...but she said i said i could only have ONE PIECE",
-    "jokeAuthor": "Monkey D. Luffy"
+    "jokeText": "I wanted another piece of pizza... but she said I could only have ONE PIECE",
+    "jokeAuthor": "Rorac",
+    "upvotes": 6
   },
   {
-    "jokeText": "Why was the computer cold? it left its windows open!",
-    "jokeAuthor": "karen Kay"
+    "jokeText": "Why was the computer cold? It left its windows open!",
+    "jokeAuthor": "Elijah",
+    "upvotes": 2
   },
   {
-    "jokeText": "How do you make a tissue dance? put a little BOOGIE in it LOLLLL",
-    "jokeAuthor": "Tysonthebodybuilder"
+    "jokeText": "How do you make a tissue dance? Put a little BOOGIE in it!",
+    "jokeAuthor": "Massiel",
+    "upvotes": 8
   },
   {
-    "jokeText": "Why did the cookie go to the doctor? because it felt crummy...",
-    "jokeAuthor": "David Thomas"
+    "jokeText": "Why did the cookie go to the doctor? Because it felt crummy...",
+    "jokeAuthor": "Stephen",
+    "upvotes": 10
   },
   {
-    "jokeText": "I just realized why I can't tell an egg a joke...they might crack smh",
-    "jokeAuthor": "Robbiethe1"
+    "jokeText": "I just realized why I can't tell an egg a joke... they might crack.",
+    "jokeAuthor": "Aidan",
+    "upvotes": 1
   },
   {
-    "jokeText": "two skeletons cant fight because neither one of them have the guts too HAHAHAHA",
-    "jokeAuthor": "ImREALLYreallyfunny"
+    "jokeText": "Two skeletons can't fight because neither one of them have the guts. HAHAHAHA",
+    "jokeAuthor": "Rorac",
+    "upvotes": 9
   }
 ]
