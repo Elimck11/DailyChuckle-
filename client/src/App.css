@@ -455,7 +455,7 @@ label form [type='radio'] {
 /* Sign-In Box */
 .sign-in-box {
   width: 300px;
-  height: 300px;
+  height: 330px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -471,7 +471,7 @@ label form [type='radio'] {
 /* Joke of the Day Box */
 .joke-box {
   width: 300px;
-  height: 360px;
+  height: 390px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -489,9 +489,9 @@ label form [type='radio'] {
 }
 
 .joke-box h2 {
-  font-size: 2rem; /* Increase the font size */
+  font-size: 1.8rem; /* Increase the font size */
   margin-top: 1rem; /* Move it down slightly */
-  margin-bottom: 1rem; /* Keeps space between the heading and the content */
+  margin-bottom: 0.5rem; /* Keeps space between the heading and the content */
   transition: transform 0.3s ease;
 }
 
@@ -500,7 +500,7 @@ label form [type='radio'] {
 }
 
 .joke-content {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #333;
   margin-top: .5in; /* Moves the joke content down by 1 inch */
 }
