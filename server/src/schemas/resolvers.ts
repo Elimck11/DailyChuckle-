@@ -98,15 +98,28 @@ const resolvers = {
 
     addJoke: async (_parent: any, { input }: AddJokeArgs, context: any) => {
       if (context.user) {
-        const joke = await Joke.create({ ...input });
+        const { jokeText } = input;
+    
+        const user = await User.findById(context.user._id);
+        if (!user) {
+          throw new AuthenticationError('User not found.');
+        }
+    
+        const joke = await Joke.create({
+          jokeText,
+          jokeAuthor: user.username, // Save username instead of userId
+        });
+    
         await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { jokes: joke._id } }
         );
+    
         return joke;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    
 
     addComment: async (_parent: any, { jokeId, commentText }: AddCommentArgs, context: any) => {
       if (context.user) {

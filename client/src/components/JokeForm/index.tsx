@@ -24,6 +24,7 @@ const JokeForm = () => {
     event.preventDefault();
 
     const userId = Auth.getProfile()?.data._id; // Get the userId from the logged-in user's profile
+    const user = Auth.getProfile()?.data;
     
     if (!userId) {
       console.error("User is not logged in or userId is unavailable.");
@@ -35,7 +36,7 @@ const JokeForm = () => {
         variables: { 
           input: {
             jokeText,
-            jokeAuthor: userId,  // Use userId instead of username
+            jokeAuthor: user.username,  
           }
         },
       });
